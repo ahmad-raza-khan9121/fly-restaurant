@@ -1,0 +1,822 @@
+/* ================================================================
+   FLY RESTAURANT — Responsive Layout Design
+================================================================ */
+
+/* ================================================================
+   1 — LARGE DESKTOP  (1400px+)
+================================================================ */
+@media (min-width: 1400px) {
+  .menu-section {
+    padding: 60px 160px;
+  }
+  .menu-grid {
+    gap: 36px;
+  }
+  .story-section {
+    padding: 60px 160px;
+  }
+}
+
+/* ================================================================
+   2 — MEDIUM DESKTOP  (1201px – 1399px)
+================================================================ */
+@media (max-width: 1399px) and (min-width: 1201px) {
+  .dropdown-menu {
+    width: 750px;
+  }
+}
+
+/* ================================================================
+   3 — SMALL DESKTOP  (1024px – 1200px)
+================================================================ */
+@media (max-width: 1200px) {
+  .logo {
+    width: 95px;
+  }
+  .site-title {
+    font-size: 28px;
+  }
+  .tagline {
+    font-size: 13px;
+  }
+  .nav-links {
+    gap: 40px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .dropdown-menu {
+    width: 680px;
+  }
+  .header-right {
+    width: auto;
+    margin: 1%;
+    margin-right: 16px;
+    gap: 14px;
+  }
+  .menu-section {
+    padding: 44px 70px;
+  }
+  .menu-item img {
+    height: 240px;
+  }
+  .story-section {
+    padding: 44px 70px;
+  }
+  .contact-section {
+    padding: 70px 60px 50px;
+  }
+}
+
+/* ================================================================
+   4 — TABLET LANDSCAPE  (768px – 1023px)
+================================================================ */
+@media (max-width: 1023px) {
+  .logo {
+    width: 75px;
+  }
+  .site-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  .tagline {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .nav {
+    position: static;
+    left: auto;
+    transform: none;
+    margin-right: 0;
+  }
+  .header-left {
+    gap: 20px;
+  }
+  .nav-links {
+    gap: 22px;
+  }
+  .nav-links a {
+    font-size: 13px;
+  }
+  .reserve-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .user-icons ul {
+    gap: 28px;
+  }
+  .header-right {
+    width: auto;
+    margin: 1%;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .dropdown-menu {
+    width: 500px;
+    left: 0;
+    transform: translateX(0) translateY(15px);
+    margin: 8px 0;
+  }
+  .dropdown:hover .dropdown-menu {
+    transform: translateX(0) translateY(0);
+  }
+  .menu-section {
+    padding: 36px 30px;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .menu-item img {
+    height: 200px;
+  }
+  .hero-content h1 {
+    font-size: 44px;
+  }
+  .story-section {
+    padding: 36px 40px;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .contact-section {
+    padding: 70px 40px 50px;
+  }
+  .contact-wrapper {
+    gap: 36px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .footer-box.contact-box {
+    margin-left: 0;
+  }
+  .footer-box.center-box {
+    grid-column: 1 / -1;
+  }
+  .footer-box p {
+    justify-content: center;
+  }
+}
+
+/* ================================================================
+   5 — MOBILE  (max-width: 767px)
+================================================================ */
+@media (max-width: 767px) {
+  /* Prevent horizontal overflow — kills white space on right */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* NOTE: body's top padding is set dynamically by JS (syncPadding
+     in script.js) to exactly match the real, live-measured header
+     height — including the 2-row mobile layout below. There used to
+     be a `padding-top: 0 !important` here which defeated that JS
+     entirely (an !important in CSS beats a plain inline style), so
+     the hero section rendered starting at the very top of the page,
+     hidden behind the fixed header. Removed — do not re-add a fixed
+     value here, or it will fight with the JS sync again. */
+  /* ── HEADER: 2-row stacked layout ── */
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Row 1: Logo + Hamburger */
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .logo-area {
+    gap: 8px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .logo {
+    width: 42px !important;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .brand {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-title {
+    font-size: 15px !important;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tagline {
+    font-size: 9px !important;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    width: 23px;
+    height: 2px;
+  }
+
+  /* Nav: hidden by default, opens on hamburger click */
+  .nav {
+    display: none !important;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    margin-right: 0 !important;
+    width: 100%;
+    background: #111;
+    border-top: 1px solid rgba(255, 215, 120, 0.2);
+    padding: 4px 0 10px;
+  }
+  .nav.open {
+    display: flex !important;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: none;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links > li > a {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: normal;
+  }
+
+  /* Mobile dropdown: accordion */
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 100% !important;
+    display: none !important;
+    flex-direction: column !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 0 !important;
+    padding: 4px 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+  .dropdown.open .dropdown-menu {
+    display: flex !important;
+  }
+  .dropdown-menu li {
+    width: 100% !important;
+    text-align: left !important;
+  }
+  .dropdown-menu li a {
+    display: block !important;
+    padding: 11px 32px !important;
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+  }
+
+  /* Row 2: Reserve + Icons */
+  .header-right {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 7px 14px;
+    background: #0e0e0e;
+    border-top: 1px solid rgba(255, 215, 120, 0.1);
+    gap: 10px 14px !important;
+  }
+  .header-right > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .reserve-btn {
+    padding: 7px 14px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap;
+  }
+  .user-icons ul {
+    gap: 16px !important;
+    margin-right: 0 !important;
+    font-size: 10px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .user-icons ul li i {
+    font-size: 14px !important;
+  }
+  .user-icons ul li {
+    white-space: nowrap;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    height: 62vh;
+    height: 62dvh;
+    min-height: 380px;
+    max-height: 600px;
+    overflow: hidden;
+  }
+  .slide img {
+    object-position: center 35%;
+  }
+  .hero-overlay {
+    padding: 0 18px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero-content h4 {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .hero-content p {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  /* Disable heavy hover on touch devices */
+  .menu-item:hover {
+    transform: none !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+  }
+  .menu-item:hover img {
+    transform: none !important;
+  }
+  .feature:hover {
+    transform: none !important;
+  }
+  .contact-info:hover {
+    transform: none !important;
+  }
+  .contact-form:hover {
+    transform: none !important;
+  }
+  .owner-card:hover {
+    transform: none !important;
+  }
+
+  /* ── MENU ── */
+  .menu-section {
+    padding: 24px 12px;
+  }
+  .menu-header {
+    margin-bottom: 24px;
+  }
+  .menu-title {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+  }
+  .menu-desc {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .menu-category {
+    margin-top: 28px;
+  }
+  .menu-category h3 {
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .sub-title {
+    font-size: 11px;
+    margin-left: 0;
+    margin-bottom: 14px;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .menu-item {
+    padding: 9px;
+    border-radius: 12px;
+  }
+  .menu-item img {
+    height: 140px;
+    border-radius: 8px;
+  }
+  .menu-item h4 {
+    font-size: 12px;
+    margin: 9px 0 4px;
+    letter-spacing: 0;
+  }
+  .price {
+    font-size: 13px;
+    margin: 4px 0 9px;
+  }
+  .actions {
+    padding: 6px 8px;
+    border-radius: 24px;
+  }
+  .wishlist {
+    font-size: 15px;
+  }
+  .actions button {
+    padding: 6px 11px;
+    font-size: 11px;
+  }
+
+  /* ── OUR STORY ── */
+  .story-hero {
+    height: 36vh;
+    min-height: 180px;
+  }
+  .story-hero h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  .story-hero p {
+    font-size: 13px;
+  }
+  .story-section {
+    padding: 26px 14px;
+    background-attachment: scroll !important;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .desc {
+    font-size: 13px;
+  }
+  .owner-card {
+    padding: 20px 14px;
+    margin-top: 26px;
+  }
+  .owner-image {
+    width: 130px;
+    height: 130px;
+  }
+  .owner-card h2 {
+    font-size: 20px;
+  }
+  .owner-card h3 {
+    font-size: 13px;
+  }
+  .owner-card p {
+    font-size: 13px;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .feature {
+    padding: 14px 10px;
+  }
+  .feature i {
+    font-size: 22px;
+  }
+  .feature h4 {
+    font-size: 12px;
+  }
+  .feature p {
+    font-size: 11px;
+  }
+  .experience-box {
+    padding: 16px 8px;
+    font-size: 13px;
+    margin-top: 30px;
+  }
+
+  /* ── CONTACT PAGE ── */
+  .contact-section {
+    padding-top: 30px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    padding-bottom: 34px !important;
+    min-height: 100vh;
+  }
+  .contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .contact-subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contact-info {
+    padding: 20px 14px;
+  }
+  .contact-form {
+    padding: 20px 14px;
+  }
+  .contact-form button {
+    width: 100%;
+  }
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 24px 14px 16px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-box.brand,
+  .footer-box.contact-box,
+  .footer-box.center-box {
+    text-align: center;
+    align-items: center;
+    margin-left: 0 !important;
+  }
+  .footer-box p {
+    justify-content: center;
+    font-size: 13px;
+  }
+  .footer-box h2,
+  .footer-box h3 {
+    font-size: 16px;
+  }
+  .footer-social {
+    gap: 10px;
+  }
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  /* footer-bottom: wrap text on mobile (pre→p already fixed in HTML) */
+  .footer-bottom {
+    font-size: 10px;
+    margin-top: 12px;
+    line-height: 1.6;
+    padding: 0 10px;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .footer-bottom p {
+    white-space: normal !important;
+    word-break: break-word;
+    font-size: 10px;
+    color: #999;
+    line-height: 1.7;
+  }
+}
+
+/* ================================================================
+   6 — SMALL MOBILE  (max-width: 480px)
+================================================================ */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+  }
+  .tagline {
+    display: none !important;
+  }
+  .logo {
+    width: 36px !important;
+  }
+
+  .hero {
+    height: 56vh;
+    height: 56dvh;
+    min-height: 340px;
+    max-height: 500px;
+  }
+  .slide img {
+    object-position: center 35%;
+  }
+  .hero-content h1 {
+    font-size: 22px;
+  }
+  .hero-content h4 {
+    font-size: 9px;
+  }
+  .hero-btn {
+    padding: 9px 20px;
+    font-size: 12px;
+  }
+
+  .menu-title {
+    font-size: 20px;
+  }
+  .menu-desc {
+    font-size: 12px;
+  }
+  .menu-category h3 {
+    font-size: 17px;
+  }
+  .sub-title {
+    font-size: 10px;
+  }
+  .menu-grid {
+    gap: 8px;
+  }
+  .menu-item {
+    padding: 8px;
+  }
+  .menu-item img {
+    height: 112px;
+    border-radius: 6px;
+  }
+  .menu-item h4 {
+    font-size: 11px;
+    margin: 7px 0 3px;
+  }
+  .price {
+    font-size: 12px;
+  }
+  .actions button {
+    font-size: 10px;
+    padding: 5px 9px;
+  }
+  .wishlist {
+    font-size: 14px;
+  }
+
+  .story-hero h1 {
+    font-size: 22px;
+  }
+  .story-hero p {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .owner-image {
+    width: 110px;
+    height: 110px;
+  }
+  .owner-card h2 {
+    font-size: 18px;
+  }
+  .features-grid {
+    gap: 8px;
+  }
+  .feature {
+    padding: 12px 8px;
+  }
+  .feature i {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .feature h4 {
+    font-size: 11px;
+  }
+  .feature p {
+    font-size: 10px;
+  }
+
+  .contact-section {
+    padding-top: 44px !important;
+  }
+  .contact-section h2 {
+    font-size: 22px;
+  }
+  .contact-info h3,
+  .contact-form h3 {
+    font-size: 17px;
+  }
+  .contact-info p {
+    font-size: 13px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+    padding: 11px 12px;
+  }
+}
+
+/* ================================================================
+   6b — EXTRA-NARROW PHONES (280px – 360px)
+   Prevents the Reserve Table button + 4 header icons from
+   overflowing/getting cut off on very small/older devices.
+================================================================ */
+@media (max-width: 360px) {
+  .header-right {
+    gap: 6px 10px !important;
+    padding: 6px 8px;
+  }
+  .reserve-btn {
+    padding: 6px 11px !important;
+    font-size: 10.5px !important;
+  }
+  .user-icons ul {
+    gap: 12px !important;
+    font-size: 9px !important;
+  }
+  .user-icons ul li i {
+    font-size: 13px !important;
+  }
+  .badge-count {
+    min-width: 13px;
+    height: 13px;
+    font-size: 8.5px;
+    top: -4px;
+    right: -9px;
+  }
+  .tagline {
+    max-width: 140px;
+  }
+}
+
+/* ================================================================
+   7 — LANDSCAPE MODE (phone tilted)
+================================================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: 90vw;
+    max-height: 340px;
+    min-height: 200px;
+    height: min(90vw, 340px);
+  }
+  .hero-content h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .hero-content h4 {
+    display: none;
+  }
+  .hero-content p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+  .story-hero {
+    height: 50vw;
+    min-height: 170px;
+  }
+  .story-hero h1 {
+    font-size: 24px;
+  }
+  .contact-section {
+    padding-top: 40px !important;
+  }
+}

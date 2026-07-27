@@ -1,0 +1,377 @@
+/* ============================================
+   FLY RESTAURANT — OUR STORY PAGE STYLES
+============================================ */
+
+/* STORY HERO */
+.story-hero {
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/images/banner-story.jpg") center/cover no-repeat;
+}
+
+.story-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* STORY SECTION */
+.story-section {
+  position: relative;
+  padding: 40px 100px;
+  color: #fff;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.96)),
+    url("../assets/images/food3.jpg") center/cover no-repeat;
+}
+
+/* GOLD GLOW EFFECT */
+.story-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.18),
+    transparent 70%
+  );
+  animation: goldGlow 8s infinite alternate;
+  pointer-events: none;
+}
+
+.story-section::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 120, 0.12),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* CONTAINER */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TITLE & TEXT */
+.title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-underline-offset: 14px;
+  text-decoration-color: rgba(255, 215, 80, 0.4);
+  background: linear-gradient(90deg, #fff8d6, #ffd86b, #fff2b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 10px;
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.desc span {
+  color: #fddc05;
+  font-weight: 600;
+}
+
+.story-section h2,
+.story-section h3 {
+  background: linear-gradient(90deg, #fff8d6, #ffd86b, #fff2b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* OWNER CARD */
+.owner-card {
+  margin-top: 60px;
+  padding: 35px 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 120, 0.25);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.owner-card:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 0 30px rgba(212, 175, 55, 0.45),
+    0 0 70px rgba(255, 215, 120, 0.2);
+}
+
+.owner-card h2 {
+  font-size: 28px;
+  text-decoration: underline solid;
+  text-underline-offset: 8px;
+}
+
+.owner-card h3 {
+  margin-bottom: 18px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.owner-card p {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.owner-card span {
+  color: #fddc05;
+  font-weight: 600;
+}
+
+/* OWNER PROFILE IMAGE */
+.owner-image {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 20px;
+  position: relative;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #ffd700, #fff2b2, #d4af37, #ffe27a);
+  animation: profileGlow 4s infinite alternate;
+  overflow: hidden;
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.35),
+    0 0 50px rgba(255, 215, 120, 0.18);
+  transition: transform 0.5s ease;
+}
+
+.owner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* HOVER EFFECT */
+.owner-card:hover .owner-image {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow:
+    0 0 30px rgba(255, 215, 120, 0.5),
+    0 0 70px rgba(255, 215, 120, 0.25);
+}
+
+.owner-card:hover .owner-image img {
+  transform: scale(1.08);
+}
+
+/* GOLD SHINE EFFECT */
+.owner-image::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 60%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(25deg);
+  animation: shineMove 5s linear infinite;
+  pointer-events: none;
+}
+
+/* FEATURES GRID */
+.features-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  text-align: center;
+  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.feature h4 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.feature p {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.feature i {
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 10px;
+  display: block;
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+}
+
+.feature:hover i {
+  transform: scale(1.1);
+  text-shadow: 0 0 12px rgba(255, 215, 120, 0.5);
+}
+
+/* EXPERIENCE BOX */
+.experience-box {
+  margin-top: 70px;
+  padding: 30px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.experience-box span {
+  color: #ffe75c;
+  font-weight: 600;
+}
+
+/* ANIMATIONS */
+@keyframes profileGlow {
+  from {
+    box-shadow:
+      0 0 20px rgba(212, 175, 55, 0.25),
+      0 0 40px rgba(255, 215, 120, 0.12);
+  }
+
+  to {
+    box-shadow:
+      0 0 35px rgba(255, 215, 120, 0.45),
+      0 0 80px rgba(255, 215, 120, 0.25);
+  }
+}
+
+@keyframes shineMove {
+  0% {
+    left: -60%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes goldGlow {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes profileGlow {
+  from {
+    box-shadow:
+      0 0 20px rgba(212, 175, 55, 0.25),
+      0 0 40px rgba(255, 215, 120, 0.12);
+  }
+  to {
+    box-shadow:
+      0 0 35px rgba(255, 215, 120, 0.45),
+      0 0 80px rgba(255, 215, 120, 0.25);
+  }
+}
+
+@keyframes shineMove {
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-section {
+    padding: 40px 20px;
+  }
+
+  .story-hero h1 {
+    font-size: 36px;
+  }
+
+  .story-hero p {
+    font-size: 16px;
+  }
+
+  .owner-card {
+    padding: 25px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .experience-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-hero h1 {
+    font-size: 28px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

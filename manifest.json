@@ -1,0 +1,34 @@
+{
+  "name": "Fly Restaurant - Premium Multi-Cuisine Dining",
+  "short_name": "Fly Restaurant",
+  "description": "Fly Restaurant, Parbhani — premium multi-cuisine dining with fresh starters, biryani, Chinese, desserts & more. Order online or reserve your table.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#0e0e0e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

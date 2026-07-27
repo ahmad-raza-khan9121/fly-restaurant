@@ -1,0 +1,193 @@
+/* ============================================
+   FLY RESTAURANT — CONTACT PAGE STYLES
+============================================ */
+
+.contact-section {
+  min-height: calc(100vh - 100px);
+  padding: 80px 80px 60px;
+  background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.96));
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.contact-section h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffd86b, #fff8d6, #ffd86b);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+.contact-subtitle {
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* INFO BOX */
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px 30px;
+  border-radius: 16px;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 120, 0.25);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.contact-info:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.contact-info h3 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  background: linear-gradient(90deg, #ffd86b, #fff8d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #ddd;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.contact-info p i {
+  color: #d4af37;
+  font-size: 16px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.contact-info a {
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ffd86b;
+}
+
+/* FORM BOX */
+.contact-form {
+  backdrop-filter: blur(12px);
+  padding: 35px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 120, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.contact-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+}
+
+.contact-form h3 {
+  margin-bottom: 22px;
+  font-size: 22px;
+  background: linear-gradient(90deg, #ffd86b, #fff8d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form button {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #d4af37, #f7e7a1, #d4af37);
+  color: #000;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.contact-form button:active {
+  transform: scale(0.97);
+}
+
+/* Success message */
+.form-success {
+  display: none;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(100, 200, 100, 0.15);
+  border: 1px solid rgba(100, 200, 100, 0.3);
+  color: #90ee90;
+  font-size: 14px;
+  text-align: center;
+}
