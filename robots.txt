@@ -1,6 +1,12 @@
+# robots.txt
+# Fly Restaurant - Ahmad Raza Khan
+
 User-agent: *
 Allow: /
+
+# Prevent indexing of user-specific pages
 Disallow: /cart.html
 Disallow: /wishlist.html
 
-Sitemap: https://flyrestaurant.example.com/sitemap.xml
+# XML Sitemap
+Sitemap: https://fly-restaurant-ahmadraza.netlify.app/sitemap.xml
